@@ -95,10 +95,15 @@ img {
   transform: scale(1.05); /* Escala la imagen ligeramente */
   opacity: 0.8; /* Reduce la opacidad al hacer hover */
 }
+
 a {
   display: inline-block;
 }
-
+/*para que funcione bien el href de nosotros*/
+#nosotros {
+  padding-top: 150px; /* Ajusta según el tamaño de tu navbar */
+  margin-top: -60px; /* Esto "empuja" hacia arriba la sección para compensar el espacio del padding */
+}
 a,
 button,
 a:hover,
@@ -139,7 +144,7 @@ h1,
 h2,
 .h2 {
   font-family: HelloValentina;
-  color: var(--rojito);
+  color: var(--rojito) !important;
   font-size: 2.25em;
   line-height: 1.25;
 }
@@ -286,6 +291,29 @@ p {
 
 
 /* ===== Buttons Css ===== */
+/* Estilo para el botón con la clase .realizarPedidoBtn*/
+.realizarPedidoBtn{
+  background-color: #a8e6a1; /* Verde clarito */
+  border: 2px solid #a8e6a1; /* Borde del mismo color verde clarito */
+  color: white; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado del botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  text-align: center; /* Centra el texto */
+  text-decoration: none; /* Elimina subrayado */
+  border-radius: 30px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.realizarPedidoBtn:hover {
+  background-color: #80e085; /* Verde más fuerte cuando pasa el mouse */
+  border-color: #80e085; /* Borde con el mismo verde más fuerte */
+  color: #fff; /* Mantén el texto blanco en el hover */
+}
+/*css img whatapp icon*/
+#whatsappIcon{
+ align-self: center;
+ margin-top: 0px;
+}
 .primary-btn {
   background: var(--primary);
   color: var(--white);
@@ -1505,6 +1533,13 @@ p {
   .call-action {
     padding: 60px 0;
   }
+}
+#call-action {
+  background-image: url("assets/images/cappelletti/fondodelivery.jpg"); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Esto asegura que la imagen cubra toda la sección */
+  background-position: center; /* Esto centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 50px 0; /* Ajusta el espacio alrededor del contenido si es necesario */
 }
 .call-action:before {
   position: absolute;
