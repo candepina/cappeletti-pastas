@@ -86,7 +86,15 @@ img {
   max-width: 100%;
   margin-top: 30px;
 }
+/*hover de la imagen de quienes somos*/
+.img-hover {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+.img-hover:hover {
+  transform: scale(1.05); /* Escala la imagen ligeramente */
+  opacity: 0.8; /* Reduce la opacidad al hacer hover */
+}
 a {
   display: inline-block;
 }
@@ -135,9 +143,10 @@ h2,
   font-size: 2.25em;
   line-height: 1.25;
 }
-.catalogoH2{
+.catalogoH2, .quienesSomosH2{
  font-size: 3rem;
 }
+
 h3,
 .h3 {
   font-size: 1.75em;
