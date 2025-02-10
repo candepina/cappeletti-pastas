@@ -51,25 +51,22 @@
             <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="page-scroll active" href="#hero">Inicio</a>
+                  <a class="page-scroll active" href="#hero" onclick="activar(this)">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#catalogo">Catálogo</a>
+                  <a class="page-scroll" href="#catalogo" onclick="activar(this)">Catálogo</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="page-scroll" href="#nosotros">Nosotros</a>
+                  <a class="page-scroll" href="#nosotros" onclick="activar(this)">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#contacto">Realizar pedido</a>
+                  <a class="page-scroll" href="#contacto" onclick="activar(this)">Realizar pedido</a>
                 </li>
               </ul>
             </div>
 
-            <div class="navbar-btn d-none d-lg-inline-block">
-              <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
-            </div>
-          </nav>
+           
           <!-- navbar -->
         </div>
       </div>
@@ -141,7 +138,7 @@
               extraordinario.
             </p>
             <div class="button">
-              <a href="javascript:void(0)" class="btn primary-btn">Ver catálogo</a>
+              <a href="#catalogo" class="btn primary-btn">Ver catálogo</a>
 
             </div>
           </div>
@@ -560,7 +557,7 @@
                     <!-- <a href="https://wa.me/5493513346463" target="_blank" class="btn primary-btn rounded-full">
                         Enviar mensaje
                     </a> -->
-                    <button onclick="enviarWhatsApp()">Enviar</button>
+                    <button class="btn primary-btn rounded-full" onclick="enviarWhatsApp()">Enviar</button>
                 </div>
                 </div>
               </div>

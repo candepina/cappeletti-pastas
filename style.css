@@ -455,6 +455,10 @@ p {
 /*===========================
   NAVBAR css 
 ===========================*/
+
+.sub-menu-bar ul{
+  column-gap: 2em;
+}
 .navbar-logo{
   margin: 0px;
   width: 200px;
@@ -478,6 +482,27 @@ p {
   top: 0;
   width: 100%;
   z-index: 9;
+}
+#navbarNine{
+  text-decoration: none;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+#navbarNine a.active{
+  color: var(--rojito) !important;
+}
+#navbarNine a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: var(--rojito);
+  transition: width 0.3s ease-in-out;
+}
+#navbarNine a.active::after {
+  width: 100%;
 }
 .sticky {
   position: fixed !important;

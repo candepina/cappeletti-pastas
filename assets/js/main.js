@@ -92,3 +92,46 @@ function enviarWhatsApp() {
   var url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
   window.open(url, "_blank"); // Abre WhatsApp en una nueva pestaña
 }
+
+//colores del navbar según actividad
+function activar(elemento) {
+  // Quita la clase "active" de todos los enlaces
+  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+  // Agrega la clase "active" solo al elemento clickeado
+  elemento.classList.add('active');
+}
+
+function detectarSeccion() {
+  let secciones = document.querySelectorAll('.section');
+  let enlaces = document.querySelectorAll('.nav-link');
+
+  let seccionActiva = null;
+  let maxVisible = 0;
+
+  secciones.forEach((seccion, i) => {
+    let rect = seccion.getBoundingClientRect();
+    let visible = rect.bottom - Math.max(rect.top, 0); // Cantidad de la sección visible
+    if (visible > maxVisible && rect.top < window.innerHeight) {
+      maxVisible = visible;
+      seccionActiva = i;
+    }
+  });
+
+  if (seccionActiva !== null) {
+    enlaces.forEach(link => link.classList.remove('active'));
+    enlaces[seccionActiva].classList.add('active');
+  }
+}
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita el salto automático de la página
+    activar(this);
+
+    // Si el enlace tiene un destino (#id), hacer scroll manualmente
+    let destino = this.getAttribute("href");
+    if (destino.startsWith("#")) {
+      document.querySelector(destino).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
