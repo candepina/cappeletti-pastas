@@ -1872,6 +1872,9 @@ p {
 
 
 /* Footer eleven css */
+.footerImg{
+  height: 4em;
+}
 .footer-eleven {
   padding-top: 100px;
   padding-bottom: 100px;
