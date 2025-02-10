@@ -84,3 +84,11 @@
     cambiarImagen("assets/images/cappelletti/salsas.jpg"); // Imagen de salsa
   });
 }) ();
+
+//botón de whatsapp
+function enviarWhatsApp() {
+  var numero = "5493513346463"; // Reemplaza con el número de WhatsApp (código de país sin +)
+  var mensaje = document.getElementById("mensaje").value;
+  var url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+  window.open(url, "_blank"); // Abre WhatsApp en una nueva pestaña
+}
